@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useRecipeStore from './recipeStore';
+import FavoriteButton from './FavoriteButton';
 
 const RecipeList = () => {
   const recipes = useRecipeStore((state) => state.filterRecipes());
@@ -37,16 +38,20 @@ const RecipeList = () => {
               <div className="recipe-card-content">
                 <div className="recipe-header">
                   <h3>{recipe.title}</h3>
-                  <div className="recipe-tags">
-                    {recipe.category && (
-                      <span className="tag category-tag">{recipe.category}</span>
-                    )}
-                    {recipe.difficulty && (
-                      <span className={`tag difficulty-tag ${recipe.difficulty.toLowerCase()}`}>
-                        {recipe.difficulty}
-                      </span>
-                    )}
+                  <div className="recipe-actions">
+                    <FavoriteButton recipeId={recipe.id} />
                   </div>
+                </div>
+                
+                <div className="recipe-tags">
+                  {recipe.category && (
+                    <span className="tag category-tag">{recipe.category}</span>
+                  )}
+                  {recipe.difficulty && (
+                    <span className={`tag difficulty-tag ${recipe.difficulty.toLowerCase()}`}>
+                      {recipe.difficulty}
+                    </span>
+                  )}
                 </div>
                 
                 <p className="recipe-description">{recipe.description}</p>
