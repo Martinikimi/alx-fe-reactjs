@@ -21,7 +21,8 @@ function Search() {
       const data = await fetchUserData(username);
       setUserData(data);
     } catch (err) {
-      setError(err.message || 'An error occurred');
+      // Display the exact error message as specified
+      setError('Looks like we cant find the user');
     } finally {
       setLoading(false);
     }
@@ -50,7 +51,7 @@ function Search() {
 
       {error && (
         <div className="error-message">
-          Looks like we can't find the user
+          Looks like we cant find the user
         </div>
       )}
 
