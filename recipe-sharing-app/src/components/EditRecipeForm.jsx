@@ -21,7 +21,8 @@ const EditRecipeForm = ({ recipe, onClose }) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // Add event.preventDefault() here as required
+    event.preventDefault();
     
     const updatedRecipe = {
       ...recipe,
