@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ProfilePage from './components/ProfilePage';
-import UserContext from './context/UserContext';
+import UserContext from './components/UserContext'; ;
 
 function App() {
   const [userData, setUserData] = useState({ 
