@@ -43,21 +43,32 @@ export const searchUsersAdvanced = async ({
   try {
     const config = getApiConfig();
     
-    // Build advanced search query
-    let searchQuery = query;
+    // Build advanced search query according to GitHub API format
+    let searchQuery = query || '';
+    
+    // Add location filter
     if (location) {
       searchQuery += ` location:${location}`;
     }
+    
+    // Add repository count filter
     if (minRepos > 0) {
       searchQuery += ` repos:>${minRepos}`;
     }
     
+    // If no query is provided, search for all users
+    if (!searchQuery.trim()) {
+      searchQuery = 'type:user';
+    }
+    
+    // Construct the exact API endpoint as specified in the task
+    const apiUrl = `https://api.github.com/search/users?q=${encodeURIComponent(searchQuery)}`;
+    
     const response = await axios.get(
-      `${API_BASE_URL}/search/users`,
+      apiUrl,
       {
         ...config,
         params: {
-          q: searchQuery || 'type:user',
           sort: 'followers',
           order: 'desc',
           page,
@@ -92,6 +103,55 @@ export const searchUsersAdvanced = async ({
       per_page: perPage,
       hasMore: page * perPage < response.data.total_count
     };
+  } catch (error) {
+    throw handleApiError(error);
+  }
+};
+
+/**
+ * Alternative function using only the search endpoint without additional user details
+ * This uses the exact format from the task description
+ */
+export const searchUsersBasic = async (searchTerm) => {
+  try {
+    const config = getApiConfig();
+    
+    // Construct the exact API endpoint as specified in the task
+    const apiUrl = `https://api.github.com/search/users?q=${encodeURIComponent(searchTerm)}`;
+    
+    const response = await axios.get(
+      apiUrl,
+      {
+        ...config,
+        params: {
+          sort: 'followers',
+          order: 'desc',
+          per_page: 30
+        }
+      }
+    );
+    
+    return response.data;
+  } catch (error) {
+    throw handleApiError(error);
+  }
+};
+
+/**
+ * Search users with simple query (for demonstration of the exact endpoint format)
+ * This is the exact implementation as mentioned in the task
+ */
+export const searchUsersWithExactEndpoint = async (query) => {
+  try {
+    const config = getApiConfig();
+    
+    // The exact endpoint format from the task description
+    const response = await axios.get(
+      `https://api.github.com/search/users?q=${encodeURIComponent(query)}`,
+      config
+    );
+    
+    return response.data;
   } catch (error) {
     throw handleApiError(error);
   }
