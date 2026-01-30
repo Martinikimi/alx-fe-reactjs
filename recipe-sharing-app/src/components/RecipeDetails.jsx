@@ -24,7 +24,37 @@ const RecipeDetails = () => {
   return (
     <div className="recipe-details">
       <div className="details-header">
-        <h1>{recipe.title}</h1>
+        <div className="recipe-title-section">
+          <h1>{recipe.title}</h1>
+          <div className="recipe-meta">
+            {recipe.category && (
+              <span className="meta-tag category">{recipe.category}</span>
+            )}
+            {recipe.difficulty && (
+              <span className={`meta-tag difficulty ${recipe.difficulty.toLowerCase()}`}>
+                {recipe.difficulty}
+              </span>
+            )}
+            {recipe.prepTime && (
+              <span className="meta-time">
+                <svg className="time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {recipe.prepTime} min prep
+              </span>
+            )}
+            {recipe.cookTime && (
+              <span className="meta-time">
+                <svg className="time-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {recipe.cookTime} min cook
+              </span>
+            )}
+          </div>
+        </div>
         <div className="action-buttons">
           <Link to="/" className="back-link">← Back to Recipes</Link>
           <EditRecipeForm recipe={recipe} />
