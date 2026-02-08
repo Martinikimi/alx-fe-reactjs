@@ -19,13 +19,13 @@ const UserProfile = () => {
         Alex Johnson
       </h1>
       
-      {/* Paragraphs styled */}
-      <p className="text-gray-600 text-center mb-4">
+      {/* Paragraphs styled with text-base */}
+      <p className="text-base text-gray-600 text-center mb-4">
         Passionate frontend developer with 5+ years of experience building modern web applications. 
         Specializing in React, Tailwind CSS, and responsive design.
       </p>
       
-      <p className="text-gray-600 text-center mb-6">
+      <p className="text-base text-gray-600 text-center mb-6">
         When not coding, I enjoy hiking, photography, and contributing to open-source projects.
       </p>
       
