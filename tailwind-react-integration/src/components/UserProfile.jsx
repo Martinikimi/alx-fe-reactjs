@@ -6,8 +6,8 @@ const UserProfile = () => {
   return (
     <div className="bg-gray-100 p-8 max-w-sm mx-auto my-20 rounded-lg shadow-lg">
       
-      {/* Image styled */}
-      <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+      {/* Image styled with w-36 h-36 */}
+      <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-6">
         <img 
           src={profileImage} 
           alt="User Profile" 
