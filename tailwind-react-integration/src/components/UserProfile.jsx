@@ -1,28 +1,45 @@
-{
-  "name": "tailwind-react-integration",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
-    "@tailwindcss/vite": "^3.4.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "tailwindcss": "^3.4.0",
-    "vite": "^5.1.6"
-  }
-}
+
+import React from 'react';
+import profileImage from '/profile-image.jpg';
+
+const UserProfile = () => {
+  return (
+    <div className="bg-gray-100 p-8 max-w-sm mx-auto my-20 rounded-lg shadow-lg">
+      
+      {/* Image styled */}
+      <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
+        <img 
+          src={profileImage} 
+          alt="User Profile" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      {/* Heading styled */}
+      <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
+        Alex Johnson
+      </h1>
+      
+      {/* Paragraphs styled */}
+      <p className="text-gray-600 text-center mb-4">
+        Passionate frontend developer with 5+ years of experience building modern web applications. 
+        Specializing in React, Tailwind CSS, and responsive design.
+      </p>
+      
+      <p className="text-gray-600 text-center mb-6">
+        When not coding, I enjoy hiking, photography, and contributing to open-source projects.
+      </p>
+      
+      <div className="flex space-x-3">
+        <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-200">
+          Follow
+        </button>
+        <button className="flex-1 bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 px-4 rounded border border-gray-300 transition duration-200">
+          Message
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default UserProfile;
