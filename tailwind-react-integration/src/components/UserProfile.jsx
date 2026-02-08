@@ -1,4 +1,3 @@
-
 import React from 'react';
 import profileImage from '/profile-image.jpg';
 
@@ -15,8 +14,8 @@ const UserProfile = () => {
         />
       </div>
       
-      {/* Heading styled */}
-      <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
+      {/* Heading styled with text-xl text-blue-800 my-4 */}
+      <h1 className="text-xl text-blue-800 my-4 text-center">
         Alex Johnson
       </h1>
       
