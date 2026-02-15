@@ -1,4 +1,5 @@
 import React from 'react'
+import HomePage from './components/HomePage'
 import './App.css'
 
 function App() {
@@ -9,22 +10,19 @@ function App() {
           <h1 className="text-3xl font-bold text-gray-900">
             Recipe Sharing Platform
           </h1>
-          <p className="text-blue-500 mt-2">
-            Welcome to your recipe sharing community!
+          <p className="text-orange-500 mt-2">
+            Share your favorite recipes with the world!
           </p>
         </div>
       </header>
-      <main className="container mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-2xl font-semibold mb-4">Getting Started</h2>
-          <p className="text-gray-600">
-            Your recipe sharing platform is ready! Start building your features.
-          </p>
-          <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Explore Recipes
-          </button>
-        </div>
+      <main>
+        <HomePage />
       </main>
+      <footer className="bg-white shadow-sm mt-8">
+        <div className="container mx-auto px-4 py-4 text-center text-gray-600">
+          <p>&copy; 2024 Recipe Sharing Platform. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   )
 }
