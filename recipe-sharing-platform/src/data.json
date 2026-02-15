@@ -3,36 +3,162 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    "ingredients": [
+      "400g spaghetti",
+      "200g pancetta or bacon, diced",
+      "4 large eggs",
+      "100g Pecorino Romano cheese, grated",
+      "100g Parmigiano-Reggiano, grated",
+      "Freshly ground black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to boil and cook spaghetti according to package instructions.",
+      "While pasta cooks, fry pancetta in a large skillet over medium heat until crispy.",
+      "In a bowl, whisk eggs with grated cheeses and plenty of black pepper.",
+      "Drain pasta, reserving 1/2 cup pasta water.",
+      "Working quickly, add hot pasta to skillet with pancetta, then remove from heat.",
+      "Pour egg mixture over pasta, tossing quickly to create a creamy sauce. Add pasta water if needed.",
+      "Serve immediately with extra cheese and pepper."
+    ],
+    "prepTime": "15 mins",
+    "cookTime": "20 mins",
+    "servings": 4
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b1caccd2d3f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80"
+    "image": "https://images.unsplash.com/photo-1565557623262-b1caccd2d3f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    "ingredients": [
+      "500g chicken breast, cubed",
+      "1 cup yogurt",
+      "2 tbsp lemon juice",
+      "2 tsp ground cumin",
+      "2 tsp ground coriander",
+      "1 tsp turmeric",
+      "1 tsp chili powder",
+      "2 tbsp butter",
+      "1 onion, finely chopped",
+      "3 cloves garlic, minced",
+      "1 tbsp ginger, grated",
+      "400g tomato puree",
+      "1 cup heavy cream",
+      "Fresh cilantro for garnish"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt, lemon juice, and spices for at least 1 hour.",
+      "Grill or pan-fry chicken until cooked through, set aside.",
+      "In a large pan, melt butter and sauté onion until soft.",
+      "Add garlic and ginger, cook for 1 minute.",
+      "Add tomato puree and simmer for 10 minutes.",
+      "Stir in cream and add cooked chicken, simmer for 5 minutes.",
+      "Garnish with cilantro and serve with rice or naan."
+    ],
+    "prepTime": "20 mins",
+    "cookTime": "30 mins",
+    "servings": 4
   },
   {
     "id": 3,
     "title": "Classic Burger",
     "summary": "Juicy beef patty with lettuce, tomato, onion, and special sauce on a sesame seed bun.",
-    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80"
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80",
+    "ingredients": [
+      "500g ground beef (80/20)",
+      "4 sesame seed buns",
+      "4 slices cheddar cheese",
+      "Lettuce leaves",
+      "2 tomatoes, sliced",
+      "1 red onion, sliced",
+      "Salt and pepper",
+      "For the sauce: 1/2 cup mayo, 2 tbsp ketchup, 1 tbsp mustard, 1 tsp pickle relish"
+    ],
+    "instructions": [
+      "Divide beef into 4 patties, season with salt and pepper.",
+      "Grill or pan-fry patties for 3-4 minutes per side.",
+      "Add cheese in last minute of cooking.",
+      "Toast buns lightly.",
+      "Mix sauce ingredients together.",
+      "Assemble burgers: bottom bun, sauce, lettuce, patty, tomato, onion, top bun."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "15 mins",
+    "servings": 4
   },
   {
     "id": 4,
     "title": "Caesar Salad",
     "summary": "Crisp romaine lettuce, parmesan cheese, croutons, and creamy Caesar dressing.",
-    "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+    "image": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "ingredients": [
+      "2 heads romaine lettuce",
+      "1 cup parmesan cheese, shaved",
+      "2 cups croutons",
+      "For the dressing: 2 anchovy fillets, 1 egg yolk, 2 tbsp lemon juice, 1 tsp Dijon mustard, 1 clove garlic, 1/2 cup olive oil, salt and pepper"
+    ],
+    "instructions": [
+      "Wash and dry lettuce, tear into bite-sized pieces.",
+      "For dressing: mash anchovies with garlic, whisk in egg yolk, mustard, lemon juice.",
+      "Slowly drizzle olive oil while whisking continuously.",
+      "Season with salt and pepper.",
+      "Toss lettuce with dressing, top with parmesan and croutons."
+    ],
+    "prepTime": "15 mins",
+    "cookTime": "0 mins",
+    "servings": 4
   },
   {
     "id": 5,
     "title": "Margherita Pizza",
     "summary": "Traditional Neapolitan pizza with tomatoes, mozzarella, fresh basil, salt, and olive oil.",
-    "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"
+    "image": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80",
+    "ingredients": [
+      "1 pizza dough",
+      "200g tomato sauce",
+      "250g fresh mozzarella, sliced",
+      "Fresh basil leaves",
+      "Extra virgin olive oil",
+      "Salt"
+    ],
+    "instructions": [
+      "Preheat oven to 250°C with pizza stone if available.",
+      "Roll out pizza dough.",
+      "Spread tomato sauce evenly, leaving border for crust.",
+      "Arrange mozzarella slices.",
+      "Bake for 10-12 minutes until crust is golden.",
+      "Top with fresh basil, drizzle with olive oil."
+    ],
+    "prepTime": "15 mins",
+    "cookTime": "12 mins",
+    "servings": 2
   },
   {
     "id": 6,
     "title": "Chocolate Lava Cake",
     "summary": "Rich chocolate cake with a molten chocolate center, served with vanilla ice cream.",
-    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
+    "ingredients": [
+      "200g dark chocolate",
+      "200g butter",
+      "4 eggs",
+      "150g sugar",
+      "100g flour",
+      "Pinch of salt",
+      "Vanilla ice cream for serving"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C. Butter ramekins.",
+      "Melt chocolate and butter together in double boiler.",
+      "Beat eggs with sugar until pale and fluffy.",
+      "Fold in chocolate mixture, then flour and salt.",
+      "Fill ramekins and bake for 12 minutes.",
+      "Let rest 1 minute, then invert onto plates.",
+      "Serve immediately with ice cream."
+    ],
+    "prepTime": "15 mins",
+    "cookTime": "12 mins",
+    "servings": 6
   }
 ]
