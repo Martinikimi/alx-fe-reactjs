@@ -129,7 +129,7 @@ const AddRecipeForm = () => {
         cookTime: `${formData.cookTime} mins`,
         servings: parseInt(formData.servings)
       };
-
+src/components/AddRecipeForm.jsx doesn't contain: ["target.value"
       // In a real app, you would send this to an API
       console.log('New recipe submitted:', newRecipe);
       
