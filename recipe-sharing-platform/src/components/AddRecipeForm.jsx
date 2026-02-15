@@ -193,6 +193,12 @@ const AddRecipeForm = () => {
               name="title"
               value={formData.title}
               onChange={handleChange}
+              onBlur={(e) => {
+                const { name, value } = e.target;
+                if (!value.trim() && errors[name]) {
+                  setErrors(prev => ({ ...prev, [name]: 'Recipe title is required' }));
+                }
+              }}
               className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                 errors.title ? 'border-red-500' : 'border-gray-300'
               }`}
@@ -213,6 +219,12 @@ const AddRecipeForm = () => {
               name="summary"
               value={formData.summary}
               onChange={handleChange}
+              onBlur={(e) => {
+                const { name, value } = e.target;
+                if (!value.trim() && errors[name]) {
+                  setErrors(prev => ({ ...prev, [name]: 'Summary is required' }));
+                }
+              }}
               rows="3"
               className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                 errors.summary ? 'border-red-500' : 'border-gray-300'
@@ -235,6 +247,12 @@ const AddRecipeForm = () => {
               name="image"
               value={formData.image}
               onChange={handleChange}
+              onBlur={(e) => {
+                const { name, value } = e.target;
+                if (!value.trim() && errors[name]) {
+                  setErrors(prev => ({ ...prev, [name]: 'Image URL is required' }));
+                }
+              }}
               className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                 errors.image ? 'border-red-500' : 'border-gray-300'
               }`}
@@ -272,6 +290,12 @@ const AddRecipeForm = () => {
                 name="prepTime"
                 value={formData.prepTime}
                 onChange={handleChange}
+                onBlur={(e) => {
+                  const { name, value } = e.target;
+                  if (!value && errors[name]) {
+                    setErrors(prev => ({ ...prev, [name]: 'Prep time is required' }));
+                  }
+                }}
                 min="1"
                 className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                   errors.prepTime ? 'border-red-500' : 'border-gray-300'
@@ -294,6 +318,12 @@ const AddRecipeForm = () => {
                 name="cookTime"
                 value={formData.cookTime}
                 onChange={handleChange}
+                onBlur={(e) => {
+                  const { name, value } = e.target;
+                  if (!value && errors[name]) {
+                    setErrors(prev => ({ ...prev, [name]: 'Cook time is required' }));
+                  }
+                }}
                 min="1"
                 className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                   errors.cookTime ? 'border-red-500' : 'border-gray-300'
@@ -316,6 +346,12 @@ const AddRecipeForm = () => {
                 name="servings"
                 value={formData.servings}
                 onChange={handleChange}
+                onBlur={(e) => {
+                  const { name, value } = e.target;
+                  if (!value && errors[name]) {
+                    setErrors(prev => ({ ...prev, [name]: 'Number of servings is required' }));
+                  }
+                }}
                 min="1"
                 className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                   errors.servings ? 'border-red-500' : 'border-gray-300'
@@ -338,6 +374,12 @@ const AddRecipeForm = () => {
               name="ingredients"
               value={formData.ingredients}
               onChange={handleChange}
+              onBlur={(e) => {
+                const { name, value } = e.target;
+                if (!value.trim() && errors[name]) {
+                  setErrors(prev => ({ ...prev, [name]: 'Ingredients are required' }));
+                }
+              }}
               rows="6"
               className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                 errors.ingredients ? 'border-red-500' : 'border-gray-300'
@@ -362,6 +404,12 @@ const AddRecipeForm = () => {
               name="instructions"
               value={formData.instructions}
               onChange={handleChange}
+              onBlur={(e) => {
+                const { name, value } = e.target;
+                if (!value.trim() && errors[name]) {
+                  setErrors(prev => ({ ...prev, [name]: 'Preparation steps are required' }));
+                }
+              }}
               rows="6"
               className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                 errors.instructions ? 'border-red-500' : 'border-gray-300'
