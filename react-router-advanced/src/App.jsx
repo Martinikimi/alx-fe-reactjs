@@ -37,7 +37,8 @@ function App() {
               <Route path="settings" element={<ProfileSettings />} />
             </Route>
           </Route>
-          
+
+          /blog/:id
           {/* Public auth route */}
           <Route path="/login" element={<Login />} />
           
