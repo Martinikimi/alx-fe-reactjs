@@ -2,29 +2,34 @@ import React, { useState } from 'react';
 import './RegistrationForm.css';
 
 const RegistrationForm = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: ''
-  });
-
+  // Individual state variables for each field
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
   // Handle input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-    // Clear error for this field when user starts typing
-    if (errors[name]) {
-      setErrors(prevErrors => ({
-        ...prevErrors,
-        [name]: ''
-      }));
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+    if (errors.username) {
+      setErrors(prevErrors => ({ ...prevErrors, username: '' }));
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    if (errors.email) {
+      setErrors(prevErrors => ({ ...prevErrors, email: '' }));
+    }
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    if (errors.password) {
+      setErrors(prevErrors => ({ ...prevErrors, password: '' }));
     }
   };
 
@@ -32,21 +37,21 @@ const RegistrationForm = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.username.trim()) {
+    if (!username.trim()) {
       newErrors.username = 'Username is required';
-    } else if (formData.username.length < 3) {
+    } else if (username.length < 3) {
       newErrors.username = 'Username must be at least 3 characters';
     }
 
-    if (!formData.email.trim()) {
+    if (!email.trim()) {
       newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = 'Email is invalid';
     }
 
-    if (!formData.password) {
+    if (!password) {
       newErrors.password = 'Password is required';
-    } else if (formData.password.length < 6) {
+    } else if (password.length < 6) {
       newErrors.password = 'Password must be at least 6 characters';
     }
 
@@ -67,6 +72,12 @@ const RegistrationForm = () => {
     setIsSubmitting(true);
     setSubmitMessage('');
 
+    const formData = {
+      username,
+      email,
+      password
+    };
+
     try {
       // Simulate API call to mock endpoint
       const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -81,7 +92,9 @@ const RegistrationForm = () => {
         const data = await response.json();
         setSubmitMessage('Registration successful!');
         // Reset form
-        setFormData({ username: '', email: '', password: '' });
+        setUsername('');
+        setEmail('');
+        setPassword('');
         console.log('Response:', data);
       } else {
         setSubmitMessage('Registration failed. Please try again.');
@@ -105,8 +118,8 @@ const RegistrationForm = () => {
             type="text"
             id="username"
             name="username"
-            value={formData.username}
-            onChange={handleChange}
+            value={username}
+            onChange={handleUsernameChange}
             placeholder="Enter username"
             className={errors.username ? 'error' : ''}
           />
@@ -119,8 +132,8 @@ const RegistrationForm = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={handleEmailChange}
             placeholder="Enter email"
             className={errors.email ? 'error' : ''}
           />
@@ -133,8 +146,8 @@ const RegistrationForm = () => {
             type="password"
             id="password"
             name="password"
-            value={formData.password}
-            onChange={handleChange}
+            value={password}
+            onChange={handlePasswordChange}
             placeholder="Enter password"
             className={errors.password ? 'error' : ''}
           />
