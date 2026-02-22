@@ -7,7 +7,7 @@ const FormikForm = () => {
   const [submitMessage, setSubmitMessage] = React.useState('');
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  // Validation schema using Yup
+  // Validation schema using Yup with explicit string().required
   const validationSchema = Yup.object({
     username: Yup.string()
       .required('Username is required'),
@@ -59,14 +59,14 @@ const FormikForm = () => {
 
   return (
     <div className="registration-form-container">
-      <h2>User Registration (Formik with Field & ErrorMessage)</h2>
+      <h2>User Registration (Formik with Yup Validation)</h2>
       
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting: formikIsSubmitting }) => (
+        {({ errors, touched, isSubmitting: formikIsSubmitting }) => (
           <Form className="registration-form">
             <div className="form-group">
               <label htmlFor="username">Username:</label>
@@ -75,7 +75,7 @@ const FormikForm = () => {
                 id="username"
                 name="username"
                 placeholder="Enter username"
-                className="form-input"
+                className={`form-input ${errors.username && touched.username ? 'error' : ''}`}
               />
               <ErrorMessage name="username" component="span" className="error-message" />
             </div>
@@ -87,7 +87,7 @@ const FormikForm = () => {
                 id="email"
                 name="email"
                 placeholder="Enter email"
-                className="form-input"
+                className={`form-input ${errors.email && touched.email ? 'error' : ''}`}
               />
               <ErrorMessage name="email" component="span" className="error-message" />
             </div>
@@ -99,7 +99,7 @@ const FormikForm = () => {
                 id="password"
                 name="password"
                 placeholder="Enter password"
-                className="form-input"
+                className={`form-input ${errors.password && touched.password ? 'error' : ''}`}
               />
               <ErrorMessage name="password" component="span" className="error-message" />
             </div>
