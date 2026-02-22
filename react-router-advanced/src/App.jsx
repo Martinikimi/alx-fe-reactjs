@@ -4,11 +4,11 @@ import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Layout from './components/Layout';
 import Login from './components/Login';
+import Profile from './components/Profile';
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
-import Profile from './pages/Profile';
 import ProfileDetails from './pages/profile/ProfileDetails';
 import ProfileSettings from './pages/profile/ProfileSettings';
 import './App.css';
@@ -23,9 +23,10 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="blog" element={<Blog />} />
-            <Route path="blog/:postId" element={<BlogPost />} />
+            {/* Dynamic routing with :id parameter */}
+            <Route path="blog/:id" element={<BlogPost />} />
             
-            {/* Protected routes */}
+            {/* Protected routes with nested structure */}
             <Route path="profile" element={
               <ProtectedRoute>
                 <Profile />
