@@ -1,0 +1,38 @@
+.App {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.App-header p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.forms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .forms-container {
+    grid-template-columns: 1fr;
+  }
+}
