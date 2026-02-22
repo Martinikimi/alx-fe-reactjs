@@ -33,26 +33,23 @@ const RegistrationForm = () => {
     }
   };
 
-  // Validate form
+  // Basic validation logic - check that no fields are left empty
   const validateForm = () => {
     const newErrors = {};
 
-    if (!username.trim()) {
+    // Check if username is empty
+    if (!username) {
       newErrors.username = 'Username is required';
-    } else if (username.length < 3) {
-      newErrors.username = 'Username must be at least 3 characters';
     }
 
-    if (!email.trim()) {
+    // Check if email is empty
+    if (!email) {
       newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = 'Email is invalid';
     }
 
+    // Check if password is empty
     if (!password) {
       newErrors.password = 'Password is required';
-    } else if (password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
     }
 
     return newErrors;
@@ -62,7 +59,7 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Validate form
+    // Basic validation - check for empty fields
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
