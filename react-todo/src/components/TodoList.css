@@ -1,0 +1,60 @@
+.todo-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.todo-stats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.stat-badge.total {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.stat-badge.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.stat-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.todo-list {
+  margin-top: 20px;
+  min-height: 200px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+}
